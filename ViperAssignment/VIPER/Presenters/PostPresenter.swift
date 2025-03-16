@@ -39,7 +39,6 @@ class PostPresenter: PostPresenterProtocol {
     }
     
     func createPost(text: String, image: UIImage?){
-        let newPost = Post(id: UUID(), user: selectedUser, text: text, image: image)
         interactor.addPost(text: text, image: image, for: selectedUser)
         loadPosts()
     }

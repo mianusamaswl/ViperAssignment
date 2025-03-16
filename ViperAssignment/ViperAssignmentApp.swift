@@ -11,8 +11,7 @@ import SwiftUI
 struct ViperAssignmentApp: App {
     var body: some Scene {
         WindowGroup {
-            let interactor = PostInteractor()
-            let presenter = PostPresenter(interactor: interactor)
+            let presenter = PostPresenter(interactor: PostInteractor())
             PostListView(presenter: presenter)
         }
     }
